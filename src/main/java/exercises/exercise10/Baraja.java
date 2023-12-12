@@ -17,7 +17,7 @@ public class Baraja {
 
     public Baraja() {
         baraja = new Carta[12 * 4];
-        int j=0;
+        int j = 0;
         for (String palo : palos)
             for (int i = 1; i <= 12; i++) {
                 baraja[j++] = new Carta(palo, i);
@@ -25,7 +25,7 @@ public class Baraja {
         barajar();
     }
 
-    private void barajar(){
+    private void barajar() {
         List<Carta> listaCartas = Arrays.asList(baraja);
         Collections.shuffle(listaCartas);
         listaCartas.toArray(baraja);
@@ -35,11 +35,11 @@ public class Baraja {
      * Repartir la carta que esta encima del montón
      * @return
      */
-    public Carta repartirEncima(){
+    public Carta repartirEncima() {
         Carta carta = null;
-        if(baraja.length>0){
-            carta=baraja[0];
-            baraja = Arrays.copyOfRange(baraja,1,baraja.length);
+        if (baraja.length > 0) {
+            carta = baraja[0];
+            baraja = Arrays.copyOfRange(baraja,1, baraja.length);
         }
         return carta;
     }
@@ -48,11 +48,11 @@ public class Baraja {
      * Repartir la que esta debajo.
      * @return
      */
-    public Carta repartirDebajo(){
+    public Carta repartirDebajo() {
         Carta carta = null;
-        if(baraja.length>0){
-            carta=baraja[baraja.length-1];
-            baraja = Arrays.copyOfRange(baraja,0,baraja.length-1);
+        if (baraja.length > 0) {
+            carta = baraja[baraja.length - 1];
+            baraja = Arrays.copyOfRange(baraja,0,baraja.length - 1);
         }
         return carta;
     }
