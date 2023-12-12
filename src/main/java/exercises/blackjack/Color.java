@@ -4,7 +4,7 @@ import com.diogonunes.jcolor.Attribute;
 
 public enum Color {
     ROJO(Attribute.RED_TEXT()),
-    NEGRO(Attribute.BLACK_TEXT());
+    NEGRO(Attribute.BRIGHT_BLACK_TEXT());
 
     // ATRIBUTOS COLOR
     private Attribute atributoColor;
@@ -16,7 +16,5 @@ public enum Color {
 
     // GETTERS
     public Attribute getAtributoColor() { return  atributoColor; }
-
-
 
 }
