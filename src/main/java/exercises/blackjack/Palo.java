@@ -18,6 +18,7 @@ public enum Palo {
         this.color = color;
     }
 
+    // MÉTODO TO STRING
     @Override
     public String toString() {
         return colorize(typeOf, color.getAtributoColor());

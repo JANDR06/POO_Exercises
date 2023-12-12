@@ -15,11 +15,23 @@ public enum Numero {
     QUEEN("Q", new int[]{10}),
     KING("K", new int[]{10});
 
+    // ATRIBUTOS NUMERO
     private String typeOf;
     private int[] puntuacion;
 
+    // CONSTRUCTOR
     Numero(String typeOf, int[] puntuacion) {
         this.typeOf = typeOf;
         this.puntuacion = puntuacion;
+    }
+
+    // GETTERS
+    public int[] getPuntuacion() { return puntuacion; }
+    public String getTypeOf() { return typeOf; }
+
+    // MÉTODO TO STRING
+    @Override
+    public String toString() {
+        return typeOf;
     }
 }
